@@ -1,0 +1,171 @@
+.App {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  background-color: rgb(8, 4, 51);
+  
+  
+}
+
+.container{
+  width: 75%;
+  height: 100vh;
+  /* background-color: red; */
+  /* display: flex; */
+  /* justify-content: center; */
+
+}
+
+
+
+.outerDiv{
+  position: relative;
+  width: 50px;
+  height: 10px;
+  border-radius: 10px;
+  z-index: 1;
+  background-color: blue;
+  
+}
+
+.circle{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 20px;
+  cursor: pointer;
+  background-color: red;
+  transition: left 0.5s ease-out, right 0.5s ease-out;
+}
+
+.light {
+  left: 40px;
+}
+
+.dark {
+  left: 0px;
+}
+
+.Title{
+  display: flex;
+  justify-content: space-between;
+}
+
+.toggle{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.block{
+  background-color: white;
+  width: 25%;
+  height: 250px;
+}
+.block.dark{
+  background-color: rgb(36, 12, 56);
+}
+.innerBlock{
+  background-color: rgb(36, 12, 56);
+  margin-top: 2.0%;
+  height: 98%;
+}
+
+.firstRow{
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  /* background-color: antiquewhite; */
+  width: 100%;
+}
+
+.pageViews p{
+  color: lightgray;
+}
+
+
+.tag{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  color: gray;
+  
+}
+.tag img{
+  width: 25px;
+  height: 25px;
+}
+
+.secondTitle{
+  text-align: left;
+}
+
+.secondRow{
+  display: flex;
+  justify-content: center;
+  gap : 15px;
+  flex-wrap: wrap;
+}
+.secondRow > .block{
+  height: 50%;
+  width: 24%;
+}
+
+
+.pageViews, .stats{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding:  0 8%;
+
+}
+
+.pageViews > img{
+  width: 25px;
+  height: 25px;
+}
+
+.stats{
+  color: white;
+  font-weight: 800;
+  font-size: 22px;
+}
+.percentage{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap : 5px;
+  color: green;
+  font-size: 12px;
+}
+.red{
+  color: red;
+}
+.percentage img{
+  width: 7px;
+  height: 7px;
+
+}
+
+h1{
+  color: white;
+  font-weight: 700;
+  font-size: 40px;
+}
+
+h5{
+  color: gray;
+}
+
+
+
+/* @media and {max-width = 480px}{
+  .firstRow{
+    display: flex;
+    flex-direction: reverse-column;
+  }
+} */
