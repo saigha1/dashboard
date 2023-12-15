@@ -3,45 +3,60 @@
   display: flex;
   justify-content: center;
   background-color: rgb(8, 4, 51);
+  height: 100vh;
+
   
   
+}
+.App.light{
+  background-color: white;
 }
 
 .container{
   width: 75%;
-  height: 100vh;
-  /* background-color: red; */
-  /* display: flex; */
-  /* justify-content: center; */
+  height: auto;
 
 }
 
-
-
 .outerDiv{
   position: relative;
-  width: 50px;
+  width: 25px;
   height: 10px;
   border-radius: 10px;
   z-index: 1;
-  background-color: blue;
-  
+  background-color: rgb(148,233,148);
+  cursor: pointer;
+  padding: 2px;  
+}
+.outerDiv.light{
+  background:darkgray;
+  left: 0px;
+}
+.theme{
+  color: gray;
+}
+.theme.light{
+  color: darkgray;
 }
 
 .circle{
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 2px;
+  left: 2px;
   width: 10px;
   height: 10px;
   border-radius: 20px;
   cursor: pointer;
-  background-color: red;
+  background-color: rgb(8, 4, 51);
   transition: left 0.5s ease-out, right 0.5s ease-out;
 }
 
+.circle.light{
+  background-color: white;
+
+}
 .light {
-  left: 40px;
+  left: 17px;
 }
 
 .dark {
@@ -58,6 +73,7 @@
   justify-content: center;
   align-items: center;
   gap: 10px;
+  /* background-color: yellow; */
 }
 
 .block{
@@ -65,14 +81,27 @@
   width: 25%;
   height: 250px;
 }
-.block.dark{
-  background-color: rgb(36, 12, 56);
+.block :hover{
+  /* background-color: rgb(36, 12, 56); */
+  opacity: 0.9;
+  cursor: pointer;
 }
+
+
 .innerBlock{
   background-color: rgb(36, 12, 56);
   margin-top: 2.0%;
-  height: 98%;
+  height: 99%;
 }
+
+.innerBlock.light{
+  background-color: lightgray;
+}
+.innerBlock.light:hover{
+  background-color: darkgray;
+
+}
+
 
 .firstRow{
   display: flex;
@@ -83,7 +112,14 @@
 }
 
 .pageViews p{
-  color: lightgray;
+  color: darkgray;
+  font-weight: 600;
+
+}
+
+.pageViews.light p{
+  color: rgb(112, 112, 112);
+  font-weight: 600;
 }
 
 
@@ -95,6 +131,9 @@
   color: gray;
   
 }
+.tag.light{
+  color: black;
+}
 .tag img{
   width: 25px;
   height: 25px;
@@ -102,17 +141,47 @@
 
 .secondTitle{
   text-align: left;
+  color: darkgray;
+  font-weight: 600;
 }
-
+.secondTitle.light{
+  color: white;
+}
 .secondRow{
   display: flex;
   justify-content: center;
   gap : 15px;
   flex-wrap: wrap;
 }
-.secondRow > .block{
-  height: 50%;
+.oblock{
+  background-color: white;
   width: 24%;
+  height: 50%;
+  padding: 0;
+  margin: 0;
+
+}
+.oblock.light :hover{
+  background-color: darkgray;
+
+}
+
+.sblock{
+  height: 100%;
+  width: 100%;
+  background-color: rgb(36, 12, 56);
+  padding: 0px;
+}
+
+.sblock:hover{
+  background-color: rgb(36, 12, 56);
+  opacity: 0.96;
+  cursor: pointer;
+}
+
+
+.sblock.light{
+  background-color: lightgray;
 }
 
 
@@ -133,6 +202,9 @@
   color: white;
   font-weight: 800;
   font-size: 22px;
+}
+.stats.light{
+  color: black;
 }
 .percentage{
   display: flex;
@@ -157,15 +229,37 @@ h1{
   font-size: 40px;
 }
 
+h1.light{
+  color: black;
+} 
+
 h5{
   color: gray;
 }
 
 
 
-/* @media and {max-width = 480px}{
-  .firstRow{
-    display: flex;
-    flex-direction: reverse-column;
+@media screen and (max-width: 580px) {
+  .App{
+    width: 100%;
   }
-} */
+  .container{
+    width: 90%;
+  }
+  .secondRow, .firstRow{
+    display: flex;
+    flex-direction: column;
+  }
+  .block{
+    width: 90%;
+  }
+  .oblock{
+    width: 100%;
+  }
+  .sblock{
+    width: 90%;
+  }
+  /* .stats.light{
+    color: black;
+  } */
+}
